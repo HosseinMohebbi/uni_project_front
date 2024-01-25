@@ -1,0 +1,128 @@
+.footer-container {
+  width: 96em;
+  margin: 0 auto;
+  border-top: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+.footer-sub {
+  max-height: 20em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1.5em;
+  text-align: justify;
+}
+
+.footer-sub-text {
+  max-height: 16em;
+  color: #727272;
+}
+
+.page-title-container {
+  /* color: #727272 !important; */
+}
+
+.call-to-us {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.phone-number-container {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  color: #727272;
+}
+
+.social-media-conainer {
+  display: flex;
+  gap: 1.6em;
+  color: #727272;
+}
+
+.copyrights-wrapper {
+  width: 100%;
+  height: 4em;
+}
+
+.copyright-container {
+  width: 96em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  color: white;
+  color: #727272;
+}
+
+@media screen and (max-width: 1552px) {
+  .footer-container {
+    display: grid;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    /* background-color: red; */
+  }
+
+  .footer-sub-text {
+    grid-area: info;
+  }
+  .call-to-us{
+    grid-area: contact-us;
+  }
+
+  .phone-number-container{
+    grid-area: phone-numbers;
+  }
+
+  .footer-container {
+    grid-template-areas:
+      "info phone-numbers"
+      "contact-us phone-numbers";
+  }
+
+}
+
+
+@media screen and (max-width: 800px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+  }
+
+  .footer-sub-text {
+    max-width: 400px;
+    /* background-color: red; */
+  }
+  .call-to-us{
+    max-width: 100%;
+  }
+
+  .phone-number-container{
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+  }
+
+  .footer-sub-text {
+    max-width: 300px;
+    /* background-color: red; */
+  }
+  .call-to-us{
+    max-width: 100%;
+  }
+
+  .phone-number-container{
+    max-width: 100%;
+  }
+}

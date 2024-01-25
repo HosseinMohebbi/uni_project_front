@@ -1,0 +1,122 @@
+.services-wrapper {
+  width: 100%;
+  /* background-color: bisque;
+  margin: 0 auto;
+  position: relative; */
+  /* top: 50%;
+  transform: translateY(-50%); */
+  /* top: 30em; */
+}
+
+.service-container {
+  width: auto;
+  margin: 0 auto;
+  position: relative;
+  top: 30em;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.services-title {
+  width: 100%;
+  text-align: center;
+}
+
+/* .services-title > h2 {
+  
+} */
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding-bottom: 2em;
+}
+
+.service-box {
+  width: 15em;
+  height: 17em;
+  border: 1px solid gray;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6em;
+  background: rgba(255, 255, 255, 0.56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.4px);
+  -webkit-backdrop-filter: blur(11.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.service-box span {
+  font-size: 1.4em;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+@media screen and (max-width: 1164px) {
+  .service-container {
+    width: 60%;
+  }
+
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+  }
+
+  .service-box {
+    background-color: white;
+    width: 15em;
+    height: 11em;
+    border: 1px solid gray;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* gap: 1.6em; */
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .service-container {
+    width: 60%;
+    margin-bottom: 100px;
+  }
+
+  .services-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-box {
+    background-color: white;
+    width: 10em;
+    height: 10em;
+    border: 1px solid gray;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* gap: 1.6em; */
+  }
+
+  .service-box span {
+    font-size: 1em;
+  }
+}

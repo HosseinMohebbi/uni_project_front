@@ -1,0 +1,33 @@
+.slong-wrapper {
+    width: 40em;
+    height: 14em;
+    margin: 2em auto 2em auto;
+    direction: ltr;
+    border-radius: 1em;
+    border: 1px solid #727272;
+    background-color: #219ebc;
+}
+
+.slong-text {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 702px) {
+    .slong-wrapper {
+        width: 30em;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .slong-wrapper {
+        width: 20em;
+    }
+}

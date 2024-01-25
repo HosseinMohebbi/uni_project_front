@@ -1,0 +1,15 @@
+.voice-to-text-button-container {
+    width: 18em;
+    height: 3em;
+    background-color: red
+}
+
+.voice-to-text-input-container {
+    width: 100%;
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+}
+.voice-to-text-input-container textarea{
+    border-radius: 1em;
+}

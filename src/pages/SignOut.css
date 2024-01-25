@@ -1,0 +1,9 @@
+.logout-container {
+    background-color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6em;
+    cursor: pointer;
+}

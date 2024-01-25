@@ -1,0 +1,31 @@
+.sign-in-container {
+    width: 24em;
+    height: 30em;
+    /* background-color: aquamarine; */
+    border-radius: 1em;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    border: 2px solid #727272;
+}
+
+.login-input {
+    width: 20em;
+    height: 2em;
+    border-radius: 0.6em;
+    border: 1px solid #727272;
+    padding: 0 1em;
+}
+
+.login-button {
+    width: 20em;
+    height: 2.6em;
+    cursor: pointer;
+    background-color: #219ebc;
+    color: white;
+    border-radius: 1em;
+    border: 1px solid #727272;
+}

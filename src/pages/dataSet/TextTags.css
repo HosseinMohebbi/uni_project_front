@@ -1,0 +1,9 @@
+.tag-container {
+    width: 8em;
+    height: 8em;
+    background-color: #219ebc;
+    border-radius: 1em;
+    text-align: center;
+    line-height: 8em;
+    cursor: pointer;
+}

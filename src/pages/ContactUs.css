@@ -1,0 +1,166 @@
+.contact-us-title-container {
+  width: 100%;
+  height: 12em;
+  background-color: #219ebc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us-title {
+  font-size: 2em;
+  color: white;
+}
+
+.phone-numbers-wrapper {
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.phone-numbers-wrapper .phone-number-container {
+  width: 16em;
+  height: 16em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 5px -5px #727272;
+}
+
+.phone-numer-title {
+  font-size: 1.4em;
+}
+
+.address-wrapper {
+  color: #727272;
+  width: 60%;
+  margin: 4em auto;
+}
+
+.address-container {
+  display: flex;
+  align-items: center;
+}
+
+.address-title {
+  font-size: 1.2em;
+}
+
+.address {
+  font-size: 1em;
+}
+
+.postal-code-container {
+  display: flex;
+  align-items: center;
+}
+
+.postal-code-title {
+  font-size: 1.2em;
+}
+
+.postal-code {
+  font-size: 1em;
+}
+
+.contact-us-form-wrapper {
+  width: 60%;
+  margin: 2em auto;
+  display: grid;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+
+.contact-us-form-wrapper input {
+  height: 2.6em;
+  border-radius: 4em;
+  border: 1px solid #727272;
+  padding: 0 1.6em;
+  font-size: 1em;
+}
+
+.contact-us-form-wrapper textarea {
+  padding: 1.6em;
+  font-size: 1.4em;
+}
+
+.contact-us-email-input {
+  height: 2.6em;
+  border-radius: 4em;
+}
+.contact-us-subject-input {
+  height: 2.6em;
+  border-radius: 4em;
+}
+.contact-us-text-input {
+  border-radius: 2em;
+}
+
+.contact-us-name-label {
+  grid-area: name;
+}
+
+.contact-us-email-label {
+  grid-area: email;
+}
+
+.contact-us-subject-label {
+  grid-area: subject;
+}
+
+.contact-us-text-label {
+  grid-area: texts;
+}
+
+.contact-us-form-wrapper {
+  grid-template-areas:
+    "name email"
+    "subject subject"
+    "texts texts";
+}
+
+.contact-us-form-wrapper label {
+  font-size: 0.9em;
+}
+
+input,
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .phone-numbers-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact-us-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    /* background-color: red; */
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .address-container {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .phone-numbers-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+}
