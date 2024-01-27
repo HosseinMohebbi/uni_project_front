@@ -3,7 +3,7 @@ import "./Drawer.css";
 import { Link, useNavigate } from "react-router-dom";
 
 function Drawer(props) {
-  const drawerItems = props.productItems;
+  const drawerItems = props.items;
   
   const navigate = useNavigate();
 

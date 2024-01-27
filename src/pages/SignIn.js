@@ -36,8 +36,8 @@ function SignIn() {
             email: email,
           })
         );
+        window.localStorage.setItem("access_token", res.data.data.token)
         navigate({ pathname: "/" });
-        console.log(isLoginSelector);
       }
     } catch (error) {
       console.log(error);

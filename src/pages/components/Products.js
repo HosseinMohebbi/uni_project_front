@@ -28,8 +28,7 @@ function Products() {
       onMouseLeave={handleOnMouseLeave}
     >
       محصولات
-      <FontAwesomeIcon icon={faAngleDown} />
-      {isShowDrawer && <Drawer productItems={productItems} />}
+      {isShowDrawer && <Drawer items={productItems} />}
     </a>
   );
 }

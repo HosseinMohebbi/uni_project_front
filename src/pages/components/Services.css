@@ -51,6 +51,7 @@
   backdrop-filter: blur(11.4px);
   -webkit-backdrop-filter: blur(11.4px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
 }
 
 .service-box span {
@@ -92,15 +93,17 @@
   }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 600px) {
   .service-container {
-    width: 60%;
+    width: auto;
     margin-bottom: 100px;
   }
 
   .services-container {
     display: flex;
-    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    /* flex-direction: column; */
+    overflow-x: scroll;
   }
 
   .service-box {

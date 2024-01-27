@@ -10,11 +10,12 @@ import { Link } from "react-router-dom";
 import Products from "./components/Products";
 import { useSelector } from "react-redux";
 import SignOut from "./SignOut";
+import AboutUS from "./components/AboutUs";
 
 function Header() {
   const isLogin = useSelector((state) => state.user.isLogin);
   const width = window.innerWidth;
-  console.log("width", width)
+  console.log("width", width);
 
   return (
     <div className="header">
@@ -31,12 +32,13 @@ function Header() {
             {/* محصولات
             <FontAwesomeIcon icon={faAngleDown} /> */}
             <Products />
+            <FontAwesomeIcon icon={faAngleDown} />
           </li>
           {/* <li className="li-with-angel">
             <Products />
           </li> */}
           <li className="li-with-angel">
-            درباره ما
+            <AboutUS />
             <FontAwesomeIcon icon={faAngleDown} />
           </li>
           <li>

@@ -1,0 +1,14 @@
+.voice-container {
+    display: flex;
+    justify-content: center;
+}
+
+.voice-title-container {
+    background-color: #219ebc;
+    width: 10em;
+    height: 2em;
+    border-radius: 0.4em ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

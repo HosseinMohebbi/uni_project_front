@@ -1,0 +1,89 @@
+/* .text-container {
+    width: 60em;
+    height: 30em;
+    background-color: #219ebc;
+    margin: 0 auto;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .text-container > div {
+    line-height: 1.6em;
+    padding-top: 2em;
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+  }
+  
+  .tags-container {
+    display: flex;
+    justify-content: center;
+    gap: 6em;
+    margin: 4em auto 0 auto;
+    max-width: 100em;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    width: 16em;
+    margin: 2em auto;
+    gap: 1em;
+  }
+  
+  .button {
+    height: 2.4em;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 710px) {
+    .text-container {
+      width: 36em;
+      height: 22em;
+    }
+  }
+  
+  @media screen and (max-width: 1300px) {
+    .tags-container {
+      max-width: 1000px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .tags-container {
+      max-width: 600px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .text-container {
+      width: 30em;
+      height: 18em;
+    }
+  }
+  
+  @media screen and (max-width: 620px) {
+    .tags-container {
+      max-width: 600px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4em;
+    }
+  }
+  
+  @media screen and (max-width: 540px) {
+    .tags-container {
+      max-width: 500px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4em;
+    }
+  }
+   */

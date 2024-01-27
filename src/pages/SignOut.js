@@ -43,6 +43,7 @@ function SignOut() {
           email: undefined,
         })
       );
+      window.localStorage.removeItem("access_token")
       navigate({ pathname: "/" });
       console.log(isLoginSelector);
       // }

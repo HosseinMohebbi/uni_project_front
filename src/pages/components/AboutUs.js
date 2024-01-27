@@ -9,7 +9,7 @@ function AboutUS() {
   const aboutUsItems = [
     { title: "معرفی شرکت" },
     { title: "اعضای شرکت" },
-    { title: "موقعیت های شغللی" },
+    { title: "موقعیت های شغلی" },
   ];
 
   const handleOnMouseOver = () => {
@@ -27,8 +27,7 @@ function AboutUS() {
       onMouseLeave={handleOnMouseLeave}
     >
       درباره ما
-      <FontAwesomeIcon icon={faAngleDown} />
-      {isShowDrawer && <Drawer productItems={aboutUsItems} />}
+      {isShowDrawer && <Drawer items={aboutUsItems} />}
     </a>
   );
 }

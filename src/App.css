@@ -1,14 +1,17 @@
 body {
-  font-family: vazirmatn;
+  font-family: Vazirmatn;
 }
 
 button {
   font-family: inherit;
 }
 
+
 a, a:hover {
   text-decoration: none;
+  color: black;
 }
+
 /* .App {
   text-align: center;
 }

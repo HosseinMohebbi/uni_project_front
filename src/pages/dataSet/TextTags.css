@@ -6,4 +6,9 @@
     text-align: center;
     line-height: 8em;
     cursor: pointer;
+    color: white;
+}
+
+.tag-container.active {
+    background-color: rgb(11, 224, 4);
 }

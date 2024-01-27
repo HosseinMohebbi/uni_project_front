@@ -34,7 +34,7 @@ function Footer() {
           <div className="page-title-container"><Link to="/contact-us">تماس با ما</Link></div>
         </div>
         <div className="footer-sub call-to-us">
-          <h2 style={{ fontSize: "1em" }}>تماس با ما</h2>
+          <h2 style={{ fontSize: "1em", color: "black" }}>تماس با ما</h2>
           <div className="phone-number-container">
             <FontAwesomeIcon icon={faPhone} style={{color:"#219ebc"}}/>
             <div>03155912345</div>

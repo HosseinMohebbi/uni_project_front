@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { stat } from "fs";
 
 export const fetchQuestion = createAsyncThunk(
   "question/fetchQuestion",
