@@ -10,6 +10,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [nickName, setNickName] = useState("");
+  const [errors, setErrors] = useState({})
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -47,6 +48,13 @@ function Register() {
       }
     } catch (error) {
       // console.log(res);
+      setErrors(
+        {
+          nickName: Object.values(error.response.data.errors.find((error) => error.property === 'nickName').constrints)[0],
+          email: Object.values(error.response.data.errors.find((error) => error.property === 'email').constrints)[0],
+          password: Object.values(error.response.data.errors.find((error) => error.property === 'password').constrints)[0],
+        }
+      )
       console.log("error:");
     }
   };
@@ -84,18 +92,21 @@ function Register() {
           value={email}
           onChange={handleOnEmailChange}
         />
+        <p>{errors.email}</p>
         <input
           className="register-input"
           type="password"
           value={password}
           onChange={handleOnPasswordChange}
         />
+        <p>{errors.password}</p>
         <input
           className="register-input"
           type="text"
           value={nickName}
           onChange={handleOnNickNameChange}
         />
+        <p>{errors.nickName}</p>
         <button className="register-button" onClick={handleOnLoginSubmitClick}>
           ثبت نام
         </button>
