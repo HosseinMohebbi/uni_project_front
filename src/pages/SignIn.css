@@ -29,3 +29,8 @@
     border-radius: 1em;
     border: 1px solid #727272;
 }
+
+.sign-in-container > p {
+    color: red;
+  }
+  

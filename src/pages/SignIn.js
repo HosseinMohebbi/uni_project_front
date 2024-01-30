@@ -9,6 +9,7 @@ import { useNavigate } from "react-router";
 function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -36,11 +37,22 @@ function SignIn() {
             email: email,
           })
         );
-        window.localStorage.setItem("access_token", res.data.data.token)
+        window.localStorage.setItem("access_token", res.data.data.token);
         navigate({ pathname: "/" });
       }
     } catch (error) {
-      console.log(error);
+      console.log("login error", error);
+      setErrors({
+        email: Object.values(
+          error.response.data.errors.find((error) => error.property === "email")
+            .constraints
+        )[0],
+        password: Object.values(
+          error.response.data.errors.find(
+            (error) => error.property === "password"
+          ).constraints
+        )[0],
+      });
     }
   };
 
@@ -55,13 +67,17 @@ function SignIn() {
           type="email"
           value={email}
           onChange={handleOnEmailChange}
+          placeholder="ایمیل"
         />
+        <p>{errors.email}</p>
         <input
           className="login-input"
           type="password"
           value={password}
           onChange={handleOnPasswordChange}
+          placeholder="رمز عبور"
         />
+        <p>{errors.password}</p>
         <button className="login-button" onClick={handleOnLoginSubmitClick}>
           ورود
         </button>

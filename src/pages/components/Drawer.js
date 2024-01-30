@@ -8,7 +8,7 @@ function Drawer(props) {
   const navigate = useNavigate();
 
   const itemClickHandler = () => {
-    navigate({pathname: "/"})
+    navigate({ pathname: "/set-text" })
   }
  
   return (

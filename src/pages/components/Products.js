@@ -7,10 +7,10 @@ function Products() {
   const [isShowDrawer, setIsShowDrawer] = useState(false);
   
   const productItems = [
-    { title: "تعیین عناوین متن", path: "/setText" },
-    { title: "تعیین عناوین عکس", path: "setText" },
-    { title: "تبدیل ویس به متن", path: "/setText" },
-    { title: "تبدیل متن به ویس", path: "/setText" },
+    { title: "تعیین عناوین متن", path: "/set-text" },
+    { title: "تعیین عناوین عکس", path: "set-image" },
+    { title: "تبدیل ویس به متن", path: "/voice-to-text" },
+    { title: "تبدیل متن به ویس", path: "/text-to-voice" },
   ];
 
   const handleOnMouseOver = () => {

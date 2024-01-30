@@ -50,12 +50,13 @@ function Register() {
       // console.log(res);
       setErrors(
         {
-          nickName: Object.values(error.response.data.errors.find((error) => error.property === 'nickName').constrints)[0],
-          email: Object.values(error.response.data.errors.find((error) => error.property === 'email').constrints)[0],
-          password: Object.values(error.response.data.errors.find((error) => error.property === 'password').constrints)[0],
+          nickName: Object.values(error.response.data.errors.find((error) => error.property === 'nickName').constraints)[0],
+          email: Object.values(error.response.data.errors.find((error) => error.property === 'email').constraints)[0],
+          password: Object.values(error.response.data.errors.find((error) => error.property === 'password').constraints)[0],
         }
       )
-      console.log("error:");
+  
+      // console.log("error:")
     }
   };
   const handleLogin = async (email, password) => {
@@ -91,6 +92,7 @@ function Register() {
           type="email"
           value={email}
           onChange={handleOnEmailChange}
+          placeholder="ایمیل"
         />
         <p>{errors.email}</p>
         <input
@@ -98,6 +100,7 @@ function Register() {
           type="password"
           value={password}
           onChange={handleOnPasswordChange}
+          placeholder="رمز عبور"
         />
         <p>{errors.password}</p>
         <input
@@ -105,6 +108,7 @@ function Register() {
           type="text"
           value={nickName}
           onChange={handleOnNickNameChange}
+          placeholder="نام کاربری"
         />
         <p>{errors.nickName}</p>
         <button className="register-button" onClick={handleOnLoginSubmitClick}>

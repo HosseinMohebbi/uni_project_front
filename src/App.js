@@ -30,8 +30,9 @@ function App() {
   };
 
   useEffect(() => {
+    handlewidthSize();
     window.addEventListener("resize", handlewidthSize);
-  }, [window.innerWidth]);
+  }, []);
 
   const location = useLocation();
 

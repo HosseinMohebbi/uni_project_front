@@ -148,6 +148,19 @@ function HamburgerMenu() {
                   تماس با ما
                 </Link>
               </label>
+            </li><li>
+              <label>
+                <Link to="/register" style={{ color: "black" }}>
+                  ثبت نام
+                </Link>
+              </label>
+            </li>
+            <li>
+              <label>
+                <Link to="/login" style={{ color: "black" }}>
+                  ورود
+                </Link>
+              </label>
             </li>
           </ul>
         </div>

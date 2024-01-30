@@ -133,6 +133,35 @@ label {
   flex-direction: column;
 }
 
+@media screen and (max-width: 1232px) {
+  .contact-us-form-wrapper {
+    width: 60%;
+    margin: 2em auto;
+    display: grid;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .contact-us-form-wrapper {
+    width: 90%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact-us-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .phone-numbers-wrapper {
     display: flex;
