@@ -21,7 +21,7 @@ export const userSlice = createSlice({
     setRegister: (state, action) => {
       state.email = action.payload.email;
       state.nickName = action.payload.nickName;
-      state.isLogin = true;
+      // state.isLogin = true;
     }
   },
 })

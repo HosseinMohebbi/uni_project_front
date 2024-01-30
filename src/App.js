@@ -84,7 +84,6 @@ function App() {
             </PrivateRoute>
           }
         ></Route>
-        {/* <Route path="/setText" element={<SetText />}></Route> */}
         <Route path="/contact-us" element={<ContactUs />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<SignIn />}></Route>
