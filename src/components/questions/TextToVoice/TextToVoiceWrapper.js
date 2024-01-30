@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { TextToVoiceActions } from "../../store/TextToVoice.slice";
+import { TextToVoiceActions } from "../../../store/TextToVoice.slice";
 import { TextToVoiceQuestion } from "./TextToVoiceQuestion";
 import { useNavigate } from "react-router";
-import "../questions/text/TextWrapper.css";
+import "../text/TextWrapper.css";
 
 export function TextToVoiceWrapper() {
   const questions = useSelector((state) => state.textToVoice.questions);

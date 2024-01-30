@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { client, getHeaders } from "../../api/client";
+import { client, getHeaders } from "../../../api/client";
 import { useNavigate } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause, faDownload } from "@fortawesome/free-solid-svg-icons";

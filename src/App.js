@@ -13,9 +13,9 @@ import SetImage from "./pages/dataSet/SetImage";
 import { TextWrapper } from "./components/questions/text/TextWrapper";
 import { ImageWrapper } from "./components/questions/image/ImageWrapper";
 import { VoiceToTextWrapper } from "./components/questions/voiceToText/VoiceToTextWrapper";
+import { TextToVoiceWrapper } from "./components/questions/TextToVoice/TextToVoiceWrapper";
 import HamburgerMenu from "./pages/components/HamburgerMenu";
 import { useEffect, useState } from "react";
-import { TextToVoiceWrapper } from "./components/TextToVoice/TextToVoiceWrapper";
 
 function App() {
   // let width = window.innerWidth;
