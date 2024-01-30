@@ -12,14 +12,14 @@ import {
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
-
+import Swiper from "./Swiper";
 
 export default function Services() {
   const navigate = useNavigate();
 
   const [showSwiper, setShowSwiper] = useState(false);
   const handlewidthSize = () => {
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 660) {
       setShowSwiper(true);
     } else {
       setShowSwiper(false);
@@ -140,8 +140,7 @@ export default function Services() {
           </div>
         </div>
       )}
-      {/* {showSwiper } */}
-        
+      {showSwiper && <Swiper />}
     </>
   );
 }

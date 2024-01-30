@@ -138,13 +138,19 @@ export const TextToVoiceQuestion = (props) => {
     <>
       <div className="text-to-voice-wrapper">
         <div className="text-to-voice-container">
-          <h2 className="question-title-container">{props.question?.title}</h2>
-          <div className="question-description-container">
+          {/* <div className="question-description-container"> */}
             {props.question?.description}
-          </div>
+          {/* </div> */}
         </div>
       </div>
       <div className="voice-buttons-container">
+      <button
+          onClick={handleOnDownloadClicked}
+          disabled={!data?.url}
+          className="voice-button"
+        >
+          <FontAwesomeIcon icon={faDownload} style={{ color: "#219ebc" }} />
+        </button>
         <button
           onClick={handleOnStopClicked}
           disabled={!isRecording}
@@ -152,13 +158,7 @@ export const TextToVoiceQuestion = (props) => {
         >
           <FontAwesomeIcon icon={faPause} style={{ color: "#219ebc" }} />
         </button>
-        <button
-          onClick={handleOnDownloadClicked}
-          disabled={!data?.url}
-          className="voice-button"
-        >
-          <FontAwesomeIcon icon={faDownload} style={{ color: "#219ebc" }} />
-        </button>
+       
         <button
           onClick={handleOnStartClicked}
           disabled={isRecording}

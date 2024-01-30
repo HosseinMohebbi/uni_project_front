@@ -5,6 +5,7 @@ import { ImageQuestion } from "./ImageQuestion";
 import {TagsActions} from "../../../store/tags.slice";
 import {useNavigate} from "react-router";
 import "./ImageWrapper.css";
+import Spinner from "../../Spinner";
 
 export function ImageWrapper() {
     const questions = useSelector((state) => state.image.questions)
@@ -51,7 +52,7 @@ export function ImageWrapper() {
 
     return (
         <div className="text-page">
-            {loading && <div>loading</div>}
+            {loading && <Spinner loading={loading}/>}
             {!loading && currentQuestion && <ImageQuestion question={currentQuestion} onNextQuestion={handleOnNextQuestion} />}
         </div>
     );

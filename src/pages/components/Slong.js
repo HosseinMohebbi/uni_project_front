@@ -49,8 +49,7 @@ function Slong() {
 
   return (
     <div className="slong-wrapper">
-      <div className="slong-text">{DUMMY_SLONGS[date].text}</div>
-      {/* <button onClick={() => console.log("date", date)}>date</button> */}
+      <div className="slong-text">{DUMMY_SLONGS[date - 1].text}</div>
     </div>
   );
 }

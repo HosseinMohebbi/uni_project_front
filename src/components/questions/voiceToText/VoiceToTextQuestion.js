@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useEffect, useMemo, useState } from "react";
 import { client, getHeaders } from "../../../api/client";
 import { useNavigate } from "react-router";
-import "./VociceToTextQuestion.css"
+import "./VociceToTextQuestion.css";
 
 export const VoiceToTextQuestion = (props) => {
   const [value, setValue] = useState("");
@@ -16,7 +16,6 @@ export const VoiceToTextQuestion = (props) => {
 
   const onSubmitHandler = (e) => {
     console.log("value:", value);
-
   };
 
   //   useEffect(() => {
@@ -61,15 +60,18 @@ export const VoiceToTextQuestion = (props) => {
   //   };
 
   const handleOnConfirmClick = async (e) => {
-    if(value.trim().length === 0)
-      return
+    if (value.trim().length === 0) return;
     try {
-      await client.post(`/questions/${props.question.id}/listening-answer`, {
-        answer: value
-      }, {
-        headers: getHeaders()
-      })
-      setValue("")
+      await client.post(
+        `/questions/${props.question.id}/listening-answer`,
+        {
+          answer: value,
+        },
+        {
+          headers: getHeaders(),
+        }
+      );
+      setValue("");
       props.onNextQuestion();
     } catch (error) {
       alert("error");
@@ -89,11 +91,16 @@ export const VoiceToTextQuestion = (props) => {
 
   return (
     <>
-      <div className="voice-container">
-        <h2 className="voice-title-container">{props.question?.title}</h2>
-        <div className="question-description-container">
-          {props.question?.description}
-        </div>
+      {/* <div className="voice-container"> */}
+        {/* <h2 className="voice-title-container">{props.question?.title}</h2> */}
+        <div className="voice-container">
+          <audio id="audio" src={props.question?.audio} controls muted={true} download="">
+            <source src={props.question?.audio} type="audio/mp3" />
+          </audio>
+          {/* <button onClick={handlePlay}>
+            Play Audio
+          </button> */}
+        {/* </div> */}
       </div>
 
       <div className="tags-container">

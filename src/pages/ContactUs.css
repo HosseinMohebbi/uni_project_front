@@ -162,5 +162,11 @@ label {
     display: flex;
     justify-content: center;
   }
-  
 }
+
+/* @media screen and (max-width: 874px) {
+  .contact-us-title-container{
+    margin-top: 2em;
+    border-top: 2px solid white;
+  }
+} */

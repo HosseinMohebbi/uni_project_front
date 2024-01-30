@@ -2,11 +2,12 @@
   width: 60em;
   height: 30em;
   background-color: #219ebc;
-  margin: 0 auto;
+  margin: 4em auto 0 auto;
   border-radius: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 2em;
 }
 
 .text-container > div {
@@ -15,6 +16,10 @@
   width: 80%;
   height: 60%;
   margin: 0 auto;
+}
+
+.question-description-container {
+  font-size: 1.2em;
 }
 
 .tags-container {

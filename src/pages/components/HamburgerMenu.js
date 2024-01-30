@@ -15,7 +15,7 @@ function HamburgerMenu() {
             height="35"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#fff"
+            stroke="#219ebc"
             stroke-width="2"
             stroke-linecap="butt"
             stroke-linejoin="arcs"
@@ -38,7 +38,7 @@ function HamburgerMenu() {
                 height="35"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#000000"
+                stroke="#219ebc"
                 stroke-width="2"
                 stroke-linecap="butt"
                 stroke-linejoin="arcs"
@@ -58,7 +58,7 @@ function HamburgerMenu() {
             </li>
             <li>
               <label class="a-label__chevron" for="item-2">
-                <Products />
+                <a >محصولات</a>
               </label>
               <input
                 type="checkbox"
@@ -75,7 +75,7 @@ function HamburgerMenu() {
                       height="35"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke="#000000"
+                      stroke="#219ebc"
                       stroke-width="2"
                       stroke-linecap="butt"
                       stroke-linejoin="arcs"
@@ -103,7 +103,7 @@ function HamburgerMenu() {
             </li>
             <li>
               <label class="a-label__chevron" for="item-3">
-                <AboutUS />
+                <a>درباره ما</a>
               </label>
               <input
                 type="checkbox"
@@ -120,7 +120,7 @@ function HamburgerMenu() {
                       height="35"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke="#000000"
+                      stroke="#219ebc"
                       stroke-width="2"
                       stroke-linecap="butt"
                       stroke-linejoin="arcs"

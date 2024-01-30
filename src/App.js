@@ -6,7 +6,7 @@ import Header from "./pages/Header";
 import Main from "./pages/Main";
 import Register from "./pages/Register";
 import SignIn from "./pages/SignIn";
-import { Route, Routes } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 // import VoiceToText from "./pages/dataSet/VoiceToText";
 import TextToVoice from "./pages/dataSet/TextToVoice";
 import SetImage from "./pages/dataSet/SetImage";
@@ -23,21 +23,30 @@ function App() {
   const handlewidthSize = () => {
     if (window.innerWidth < 874) {
       setShowHamber(true);
-    }else{
-      setShowHamber(false)
+    } else {
+      setShowHamber(false);
     }
-    console.log(window.innerWidth)
+    console.log(window.innerWidth);
   };
 
   useEffect(() => {
     window.addEventListener("resize", handlewidthSize);
   }, [window.innerWidth]);
 
-  // console.log("width", width);
+  const location = useLocation();
+
   return (
     <div className="App">
-      {!showHamber && <Header />}
-      {showHamber && <HamburgerMenu />}
+      {!showHamber &&
+        location.pathname != "/set-text" &&
+        location.pathname != "/set-image" &&
+        location.pathname != "/voice-to-text" &&
+        location.pathname != "/text-to-voice" && <Header />}
+      {showHamber &&
+        location.pathname != "/set-text" &&
+        location.pathname != "/set-image" &&
+        location.pathname != "/voice-to-text" &&
+        location.pathname != "/text-to-voice" && <HamburgerMenu />}
       <Routes>
         {/* <header className="App-header" /> */}
 
@@ -59,15 +68,31 @@ function App() {
             </PrivateRoute>
           }
         ></Route>
+        <Route
+          path="/voice-to-text"
+          element={
+            <PrivateRoute>
+              <VoiceToTextWrapper />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/text-to-voice"
+          element={
+            <PrivateRoute>
+              <TextToVoiceWrapper />
+            </PrivateRoute>
+          }
+        ></Route>
         {/* <Route path="/setText" element={<SetText />}></Route> */}
         <Route path="/contact-us" element={<ContactUs />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<SignIn />}></Route>
-
-        <Route path="/voice-to-text" element={<VoiceToTextWrapper />}></Route>
-        <Route path="/text-to-voice" element={<TextToVoiceWrapper />}></Route>
       </Routes>
-      <Footer />
+      {location.pathname != "/set-text" &&
+        location.pathname != "/set-image" &&
+        location.pathname != "/voice-to-text" &&
+        location.pathname != "/text-to-voice" && <Footer />}
     </div>
   );
 }

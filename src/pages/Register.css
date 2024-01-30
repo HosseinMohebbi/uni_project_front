@@ -1,7 +1,6 @@
 .register-container {
   width: 24em;
   height: 30em;
-  /* background-color: aquamarine; */
   border-radius: 1em;
   margin: 2em auto;
   display: flex;
@@ -21,7 +20,7 @@
 }
 
 .register-button {
-  width: 20em;
+  width: 22em;
   height: 2.6em;
   cursor: pointer;
   background-color: #219ebc;

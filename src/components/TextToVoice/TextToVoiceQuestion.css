@@ -2,7 +2,7 @@
   width: 60em;
   height: 30em;
   background-color: #219ebc;
-  margin: 0 auto;
+  margin: 4em auto;
   border-radius: 1em;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,6 @@
   padding-top: 2em;
   width: 80%;
   height: 60%;
-  margin: 0 auto;
 }
 .voice-buttons-container {
   width: 20em;

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { client, getHeaders } from "../../../api/client";
 import { useNavigate } from "react-router";
 import "./ImageQuestion.css";
+import Spinner from "../../Spinner";
 
 export const ImageQuestion = (props) => {
   const [question, setQuestion] = useState(undefined);
@@ -75,17 +76,14 @@ export const ImageQuestion = (props) => {
   };
 
   if (questionLoading) {
-    return <div>Loading</div>;
+    return <Spinner loading={loading} />;
   }
 
   return (
     <>
       <div className="set-image-wrapper">
         <div className="image-container">
-          <h2 className="question-title-container">{question?.title}</h2>
-          <div className="question-description-container">
-            <img src="http://localhost:9099/gallery/686870.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=F5rhF7aH3bdbZa2RM7FU%2F20240117%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240117T131946Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=7d5aebc569d34c7807804df26e9cf6cd69835eda1a78882222e43dac0814aea2" />
-          </div>
+          <img src={question?.image} alt={question?.title} />
         </div>
       </div>
       <div className="tags-container">
