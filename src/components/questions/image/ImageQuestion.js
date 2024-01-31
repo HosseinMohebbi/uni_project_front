@@ -1,6 +1,6 @@
 import TextTags from "../../../pages/dataSet/TextTags";
 import { useSelector } from "react-redux";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { client, getHeaders } from "../../../api/client";
 import { useNavigate } from "react-router";
 import "./ImageQuestion.css";
@@ -75,9 +75,9 @@ export const ImageQuestion = (props) => {
     navigate("/");
   };
 
-  if (questionLoading) {
-    return <Spinner loading={loading} />;
-  }
+  // if (questionLoading) {
+  //   return <Spinner loading={loading} />;
+  // }
 
   return (
     <>

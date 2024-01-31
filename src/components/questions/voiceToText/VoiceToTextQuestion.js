@@ -1,63 +1,14 @@
-import TextTags from "../../../pages/dataSet/TextTags";
-import { useSelector } from "react-redux";
-import { useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import { client, getHeaders } from "../../../api/client";
-import { useNavigate } from "react-router";
 import "./VociceToTextQuestion.css";
 
 export const VoiceToTextQuestion = (props) => {
   const [value, setValue] = useState("");
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
 
   const handleChangeInput = (e) => {
     setValue(e.target.value);
   };
-
-  const onSubmitHandler = (e) => {
-    console.log("value:", value);
-  };
-
-  //   useEffect(() => {
-  //     async function fetchQuestion() {
-  //       setQuestion(undefined);
-  //       setQuestionLoading(true);
-  //       try {
-  //         const response = await client.get(`/newsletters/${props.question.id}`, {
-  //           headers: getHeaders(),
-  //         });
-  //         setQuestion(response.data.data.newsletter);
-  //       } catch (error) {
-  //         console.error("fetchQuestion error", error);
-  //       }
-  //       setQuestionLoading(false);
-  //     }
-
-  //     fetchQuestion();
-  //   }, [props.question.id]);
-
-  //   const handleOnTagClick = (tag) => {
-  //     if (selectedTags.includes(tag.id)) {
-  //       setSelectedTags(selectedTags.filter((id) => id != tag.id));
-  //     } else {
-  //       setSelectedTags([...selectedTags, tag.id]);
-  //     }
-  //   };
-
-  //   const tagQuestion = async () => {
-  //     setLoading(true);
-  //     await client.post(
-  //       `/question/${props.question.id}/listening-answer`,
-  //       {
-  //         tagIds: selectedTags,
-  //       },
-  //       {
-  //         headers: getHeaders(),
-  //       }
-  //     );
-  //     setSelectedTags([]);
-  //     setLoading(false);
-  //   };
 
   const handleOnConfirmClick = async (e) => {
     if (value.trim().length === 0) return;
@@ -78,32 +29,20 @@ export const VoiceToTextQuestion = (props) => {
     }
   };
 
-  //   const handleOnFinishClick = async () => {
-  //     if (selectedTags) {
-  //       try {
-  //         await tagQuestion();
-  //       } catch (error) {
-  //         alert("error");
-  //       }
-  //     }
-  //     navigate("/");
-  //   };
-
   return (
     <>
-      {/* <div className="voice-container"> */}
-        {/* <h2 className="voice-title-container">{props.question?.title}</h2> */}
-        <div className="voice-container">
-          <audio id="audio" src={props.question?.audio} controls muted={true} download="">
-            <source src={props.question?.audio} type="audio/mp3" />
-          </audio>
-          {/* <button onClick={handlePlay}>
-            Play Audio
-          </button> */}
-        {/* </div> */}
+      <div className="voice-container">
+        <audio
+          id="audio"
+          src={props.question?.audio}
+          controls
+          muted={true}
+          download=""
+        >
+          <source src={props.question?.audio} type="audio/mp3" />
+        </audio>
       </div>
-
-      <div className="tags-container">
+      <div className="voice-to-text-answer-container">
         <textarea
           name=""
           id=""
@@ -120,13 +59,6 @@ export const VoiceToTextQuestion = (props) => {
         >
           ارسال
         </button>
-        {/* <button
-          className="submit-button button"
-          onClick={handleOnFinishClick}
-          disabled={loading}
-        >
-          اتمام
-        </button> */}
       </div>
     </>
   );

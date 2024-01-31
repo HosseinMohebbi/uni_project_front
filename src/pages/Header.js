@@ -2,10 +2,7 @@ import React from "react";
 import "./Header.css";
 import logo from "../assets/logo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngleDown,
-  faArrowRightFromBracket,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Products from "./components/Products";
 import { useSelector } from "react-redux";
@@ -20,7 +17,6 @@ function Header() {
   return (
     <div className="header">
       <div className="header-wrapper">
-        {/* <div className="header-rightside"> */}
         <img src={logo} alt="abc" width="80px" />
         <ul className="header_list-container">
           <li>
@@ -29,14 +25,10 @@ function Header() {
             </Link>
           </li>
           <li className="li-with-angel">
-            {/* محصولات
-            <FontAwesomeIcon icon={faAngleDown} /> */}
             <Products />
             <FontAwesomeIcon icon={faAngleDown} />
           </li>
-          {/* <li className="li-with-angel">
-            <Products />
-          </li> */}
+
           <li className="li-with-angel">
             <AboutUS />
             <FontAwesomeIcon icon={faAngleDown} />
@@ -47,7 +39,6 @@ function Header() {
             </Link>
           </li>
         </ul>
-        {/* </div> */}
         {!isLogin && (
           <ul className="header_list-container">
             <li>
@@ -62,12 +53,6 @@ function Header() {
             </li>
           </ul>
         )}
-        {/* {isLogin && (
-          <div className="logout-container">
-            <Link to="/">خروج از حساب</Link>
-            <FontAwesomeIcon icon={faArrowRightFromBracket} />
-          </div>
-        )} */}
         {isLogin && <SignOut />}
       </div>
     </div>

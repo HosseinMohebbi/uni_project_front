@@ -5,6 +5,8 @@
   width: 100%;
   background-color: white;
   border-bottom: 1px solid #727272;
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 1.2em;
 }
 
 .header-wrapper {

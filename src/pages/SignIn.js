@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./SignIn.css";
-import { Divider } from "antd";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setLogin } from "../store/user.slice";
 import { useNavigate } from "react-router";
 
@@ -13,7 +12,6 @@ function SignIn() {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isLoginSelector = useSelector((state) => state.isLogin);
 
   const handleOnEmailChange = (e) => {
     setEmail(e.target.value);

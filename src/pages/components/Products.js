@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import Drawer from "./Drawer";
+import "./Products.css"
 
 function Products() {
   const [isShowDrawer, setIsShowDrawer] = useState(false);

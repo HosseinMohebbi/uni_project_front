@@ -39,7 +39,6 @@ const voiceToTextSlice = createSlice({
       state.isFinished = false;
     });
     builder.addCase(fetchVoiceToTextQuestions.fulfilled, (state, action) => {
-      let questions = state.questions ?? [];
       state.questions = action.payload.listeningQuestions;
       state.loading = false;
       state.currentQuestion = 0;

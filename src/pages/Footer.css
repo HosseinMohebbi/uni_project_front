@@ -1,6 +1,3 @@
-/* .footer {
-  width: 96em;
-} */
 .footer-container {
   width: 96em;
   margin: 0 auto;
@@ -8,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2em;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .footer-sub {
@@ -51,6 +49,7 @@
 .copyrights-wrapper {
   width: 100%;
   height: 4em;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .copyright-container {
@@ -97,13 +96,11 @@
   .footer-container {
     display: flex;
     flex-direction: column;
-    /* background-color: red; */
     width: 100%;
   }
 
   .footer-sub-text {
     max-width: 400px;
-    /* background-color: red; */
   }
   .call-to-us {
     max-width: 100%;
@@ -121,13 +118,11 @@
   .footer-container {
     display: flex;
     flex-direction: column;
-    /* background-color: red; */
     width: 100%;
   }
 
   .footer-sub-text {
     max-width: 300px;
-    /* background-color: red; */
   }
   .call-to-us {
     max-width: 100%;

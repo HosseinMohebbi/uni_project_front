@@ -6,7 +6,6 @@
 nav {
   background-color: white;
   height: 50px;
-  /* width: 100%; */
   padding: 0 16px;
   display: -ms-flexbox;
   display: -webkit-box;
@@ -14,7 +13,7 @@ nav {
   display: flex;
   -webkit-align-items: center;
   align-items: center;
-  /* fade in checked menu */
+  font-family: "Vazirmatn", sans-serif;
 }
 nav .m-menu__checkbox {
   display: none;
@@ -23,7 +22,6 @@ nav label.m-menu__toggle {
   cursor: pointer;
 }
 nav .m-menu {
-  /* position: absolute; */
   position: fixed;
   top: 0;
   right: 0;

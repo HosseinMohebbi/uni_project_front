@@ -176,7 +176,6 @@ label {
     display: flex;
     flex-direction: column;
     width: 90%;
-    /* background-color: red; */
   }
 }
 
@@ -192,10 +191,3 @@ label {
     justify-content: center;
   }
 }
-
-/* @media screen and (max-width: 874px) {
-  .contact-us-title-container{
-    margin-top: 2em;
-    border-top: 2px solid white;
-  }
-} */

@@ -1,8 +1,6 @@
 import React from "react";
 import "./HamburgerMenu.css";
 import { Link } from "react-router-dom";
-import Products from "./Products.js";
-import AboutUS from "./AboutUs.js";
 
 function HamburgerMenu() {
   return (

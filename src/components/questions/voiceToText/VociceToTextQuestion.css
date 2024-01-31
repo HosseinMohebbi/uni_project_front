@@ -1,15 +1,50 @@
 .voice-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 16em;
+  display: flex;
+  justify-content: center;
+  margin-top: 16em;
 }
 
-.voice-title-container {
-    background-color: #219ebc;
-    width: 10em;
-    height: 2em;
-    border-radius: 0.4em ;
+.voice-to-text-answer-container {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+textarea {
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 1.4em;
+  width: 60em;
+  height: 20em;
+}
+
+.submit-button {
+  font-family: "Vazirmatn", sans-serif;
+}
+
+@media screen and (max-width: 1080px) {
+  textarea {
+    width: 40em;
+    height: 20em;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  textarea {
+    width: 36em;
+    height: 18em;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  textarea {
+    width: 24em;
+    height: 12em;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  textarea {
+    width: 16em;
+    height: 8em;
+  }
 }

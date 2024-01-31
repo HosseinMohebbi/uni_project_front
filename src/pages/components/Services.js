@@ -3,13 +3,11 @@ import "./Services.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMicrophone,
-  faArrowRight,
   faQuoteLeft,
   faQuoteRight,
   faRepeat,
   faImage,
 } from "@fortawesome/free-solid-svg-icons";
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 import Swiper from "./Swiper";
@@ -28,8 +26,9 @@ export default function Services() {
   };
 
   useEffect(() => {
+    handlewidthSize();
     window.addEventListener("resize", handlewidthSize);
-  }, [window.innerWidth]);
+  }, []);
 
   const textHandler = () => {
     navigate({ pathname: "/set-text" });

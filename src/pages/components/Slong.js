@@ -41,6 +41,7 @@ const DUMMY_SLONGS = [
   { id: 27, text: "Unlocking Universes with AI" },
   { id: 28, text: "Weaving Dreams into Reality with AI" },
   { id: 29, text: "Breathe Life into Your Ideas with AI" },
+  { id: 30, text: "Elevate Your Expectations with Memorable AI"},
 ];
 
 function Slong() {

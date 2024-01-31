@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Register.css";
-import { Divider } from "antd";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setLogin, setRegister } from "../store/user.slice";
@@ -10,7 +9,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [nickName, setNickName] = useState("");
-  const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState({});
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -47,16 +46,22 @@ function Register() {
         navigate({ pathname: "/" });
       }
     } catch (error) {
-      // console.log(res);
-      setErrors(
-        {
-          nickName: Object.values(error.response.data.errors.find((error) => error.property === 'nickName').constraints)[0],
-          email: Object.values(error.response.data.errors.find((error) => error.property === 'email').constraints)[0],
-          password: Object.values(error.response.data.errors.find((error) => error.property === 'password').constraints)[0],
-        }
-      )
-  
-      // console.log("error:")
+      setErrors({
+        nickName: Object.values(
+          error.response.data.errors.find(
+            (error) => error.property === "nickName"
+          ).constraints
+        )[0],
+        email: Object.values(
+          error.response.data.errors.find((error) => error.property === "email")
+            .constraints
+        )[0],
+        password: Object.values(
+          error.response.data.errors.find(
+            (error) => error.property === "password"
+          ).constraints
+        )[0],
+      });
     }
   };
   const handleLogin = async (email, password) => {

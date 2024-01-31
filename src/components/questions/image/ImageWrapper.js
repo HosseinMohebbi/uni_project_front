@@ -52,7 +52,7 @@ export function ImageWrapper() {
 
     return (
         <div className="text-page">
-            {loading && <Spinner loading={loading}/>}
+            {/* {loading && <Spinner loading={loading}/>} */}
             {!loading && currentQuestion && <ImageQuestion question={currentQuestion} onNextQuestion={handleOnNextQuestion} />}
         </div>
     );

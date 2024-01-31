@@ -7,9 +7,6 @@ import Main from "./pages/Main";
 import Register from "./pages/Register";
 import SignIn from "./pages/SignIn";
 import { Route, Routes, useLocation } from "react-router";
-// import VoiceToText from "./pages/dataSet/VoiceToText";
-import TextToVoice from "./pages/dataSet/TextToVoice";
-import SetImage from "./pages/dataSet/SetImage";
 import { TextWrapper } from "./components/questions/text/TextWrapper";
 import { ImageWrapper } from "./components/questions/image/ImageWrapper";
 import { VoiceToTextWrapper } from "./components/questions/voiceToText/VoiceToTextWrapper";
@@ -18,7 +15,6 @@ import HamburgerMenu from "./pages/components/HamburgerMenu";
 import { useEffect, useState } from "react";
 
 function App() {
-  // let width = window.innerWidth;
   const [showHamber, setShowHamber] = useState(false);
   const handlewidthSize = () => {
     if (window.innerWidth < 874) {
@@ -49,9 +45,6 @@ function App() {
         location.pathname != "/voice-to-text" &&
         location.pathname != "/text-to-voice" && <HamburgerMenu />}
       <Routes>
-        {/* <header className="App-header" /> */}
-
-        {/* </header> */}
         <Route path="/" element={<Main />}></Route>
         <Route
           path="/set-text"
